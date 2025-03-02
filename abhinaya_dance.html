@@ -153,6 +153,19 @@
   </div>
 
   <script>
+     // Remove fade-out class when the page is loaded or navigated back to
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.remove('fade-out');
+    });
+
+    // Handle page navigation (back/forward)
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted) {
+        document.body.classList.remove('fade-out');
+      }
+    });
+
+    
     // Smooth Page Transition
     document.querySelectorAll('.button').forEach(button => {
       button.addEventListener('click', (e) => {
