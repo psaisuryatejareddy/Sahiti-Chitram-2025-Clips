@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhinaya Dance - Sahiti's Chitram 2025 Clips</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      color: #fff;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      animation: slideUp 1.5s ease-in-out;
+    }
+
+    .button {
+      padding: 1.5rem 3rem;
+      font-size: 1.5rem;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.5s ease;
+      border-radius: 50%;
+    }
+
+    .button:hover::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .button i {
+      font-size: 1.8rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Page Transition */
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+
+      .button {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Abhinaya Dance</h1>
+  <div class="button-container">
+    <a href="https://mega.nz/folder/C3pBxTCC#zUUr3OSmTP2b707iWn5GSw" class="button">
+      <i class="fas fa-play"></i> Part 1
+    </a>
+    <a href="https://mega.nz/folder/2ZZhGZzT#a8brxYBQNgpt8Xhz4xBIMg" class="button">
+      <i class="fas fa-play"></i> Part 2
+    </a>
+  </div>
+
+  <script>
+    // Smooth Page Transition
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent immediate redirect
+        document.body.classList.add('fade-out'); // Add fade-out effect
+        setTimeout(() => {
+          window.location.href = button.getAttribute('href'); // Redirect after fade-out
+        }, 500); // Match the duration of the fade-out transition
+      });
+    });
+
+    // Optional: Add sound effects on button hover
+    const hoverSound = new Audio('hover-sound.mp3'); // Add a hover sound file
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        hoverSound.play();
+      });
+    });
+  </script>
+</body>
+</html>
