@@ -4,78 +4,188 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sahiti's Chitram 2025 Clips</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* General body styling */
-    body {
+    /* General Reset */
+    * {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-      font-family: 'Arial', sans-serif;
-      color: #333;
-    }
-
-    /* Title styling */
-    h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Button container styling */
-    .button-container {
-      text-align: center;
-    }
-
-    /* Big box-style button styling */
-    .big-button {
-      display: inline-block;
-      padding: 20px 40px;
-      font-size: 24px;
-      font-weight: bold;
+      height: 100vh;
+      flex-direction: column;
       color: #fff;
-      background-color: #ff6f61;
-      border: none;
+      overflow: hidden;
+      cursor: url('default-cursor.png'), auto;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      color: #fff;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      animation: slideUp 1.5s ease-in-out;
+    }
+
+    .button {
+      padding: 1.5rem 3rem;
+      font-size: 1.5rem;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.3);
       border-radius: 15px;
-      box-shadow: 0 10px 20px rgba(255, 111, 97, 0.3);
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      text-align: center;
       text-decoration: none;
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
     }
 
-    /* Hover effect for the button */
-    .big-button:hover {
-      background-color: #ff3b2f;
-      box-shadow: 0 15px 25px rgba(255, 59, 47, 0.4);
-      transform: translateY(-5px);
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.5s ease;
+      border-radius: 50%;
     }
 
-    /* Active effect for the button */
-    .big-button:active {
-      transform: translateY(0);
-      box-shadow: 0 5px 15px rgba(255, 59, 47, 0.4);
+    .button:hover::before {
+      transform: translate(-50%, -50%) scale(1);
     }
 
-    /* Optional: Add a creative text or icon */
-    .big-button::after {
-      content: '→';
-      margin-left: 10px;
-      font-size: 28px;
+    .button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .button i {
+      font-size: 1.8rem;
+    }
+
+    /* Custom Cursor */
+    .button {
+      cursor: url('pointer-cursor.png'), pointer;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Page Transition */
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+
+      .button {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Title -->
   <h1>Sahiti's Chitram 2025 Clips</h1>
-
-  <!-- Button container -->
   <div class="button-container">
-    <!-- Big box-style button -->
-    <a href="https://mega.nz/folder/W6QT1bKD#vNkT9sclnrLdrV9HSnwk1A" class="big-button">Dance Team</a>
+    <a href="https://mega.nz/folder/zigFiZwK#vAYGCWIGz3kG-KEiM3dVpA" class="button">
+      <i class="fas fa-theater-masks"></i> Abhinaya Classical
+    </a>
+    <a href="https://mega.nz/folder/yugFDBxD#9omTCybLoucRHFg7b03axw" class="button">
+      <i class="fas fa-microphone-alt"></i> Singing Team
+    </a>
+    <a href="https://mega.nz/folder/W6QT1bKD#vNkT9sclnrLdrV9HSnwk1A" class="button">
+      <i class="fas fa-running"></i> Dance Team <!-- Updated icon -->
+    </a>
+    <a href="https://mega.nz/folder/nvJg2RRL#k6TsWugF0xsgvNj9nZe4FA" class="button">
+      <i class="fas fa-users"></i> Skit Team
+    </a>
+    <a href="abhinaya_dance.html" class="button">
+      <i class="fas fa-hands"></i> Abhinaya Dance <!-- Updated icon -->
+    </a>
   </div>
+
+  <script>
+    // Smooth Page Transition
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent immediate redirect
+        document.body.classList.add('fade-out'); // Add fade-out effect
+        setTimeout(() => {
+          window.location.href = button.getAttribute('href'); // Redirect after fade-out
+        }, 500); // Match the duration of the fade-out transition
+      });
+    });
+
+    // Optional: Add sound effects on button hover
+    const hoverSound = new Audio('hover-sound.mp3'); // Add a hover sound file
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        hoverSound.play();
+      });
+    });
+  </script>
 </body>
 </html>
